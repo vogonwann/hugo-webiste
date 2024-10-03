@@ -1,4 +1,4 @@
 theme = 'ficurinia'
 languageCode = 'en-us'
 title = 'Linux/FOSS and beyond'
-basURL = 'https://blog.janjic.lol'
+baseURL = 'https://janjic.lol'

@@ -1,6 +1,19 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://janjic.lol/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+defaultContentLanguage = "en"
+title = 'Beyond FOSS and Linux'
+
 
 relativeURLs = true
 canonifyURLs = true
+
+[params]
+    author = "Ivan Janjić"
+    description = "Blog about GNU/Linux, FOSS, Open Source, Linux on mobile, coding and life"
+    # It's best to put these icons in the "static" folder of your site
+    logo = "/logo.svg"
+    favicon = "/favicon.png"  # 32x32
+    faviconIco = "/favicon.ico"  # 32x32
+    appletouch = "/apple-touch-icon.png"  # 180x180
+    svgicon = "/logo.svg"
+    icon512 = "/icon512.png"
