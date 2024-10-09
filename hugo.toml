@@ -2,3 +2,30 @@ theme = 'ficurinia'
 languageCode = 'en-us'
 title = 'Linux/FOSS and beyond'
 baseURL = 'https://janjic.lol'
+
+[menu]
+    # these links will be added to the main navigation menu, sorted by weight
+    # other elements in this menu are added automatically from the "pages" folder
+    # the folder it will look into can be customized with the pages variable
+    # in params above
+    # these links (menu.icons) will be added as icon links below the main nav
+    [[menu.icons]]
+        identifier = "mastodon"
+        name = "Mastodon"
+        url = "https://mastodon.social/@wannoye"
+        weight = 10
+    [[menu.icons]]
+        identifier = "gitlab"
+        name = "GNOME GitLab"
+        url = "https://gitlab.gnome.org/wannoyeah"
+        weight = 20
+    [[menu.icons]]
+        identifier = "github"
+        name = "GitHub"
+        url = "https://github.com/vogonwann"
+        weight = 20
+    [[menu.icons]]
+        identifier = "instagram"
+        name = "Pixelfed"
+        url = "https://pixelfed.social/i/web/profile/566050411221857022"
+        weight = 30

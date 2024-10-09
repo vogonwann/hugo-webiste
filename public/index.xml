@@ -1,11 +1,55 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
   <channel>
     <title>Linux/FOSS and beyond</title>
-    <link>http://192.168.1.233:1313/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Linux/FOSS and beyond</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Oct 2024 06:50:14 +0000</lastBuildDate><atom:link href="http://192.168.1.233:1313/index.xml" rel="self" type="application/rss+xml" /><icon>http://192.168.1.233:1313/img/icon.svg</icon>
+    <lastBuildDate>Thu, 03 Oct 2024 18:13:42 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/img/icon.svg</icon>
+    
+    
+    <item>
+      <title>Introduction</title>
+      <link>http://localhost:1313/posts/intro-post/</link>
+      <pubDate>Thu, 03 Oct 2024 18:13:42 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/intro-post/</guid>
+      <description><![CDATA[<h1 id="welcome-to-the-geek-side-linux-foss-and-all-things-open-source">Welcome to the Geek Side: Linux, FOSS, and All Things Open Source</h1>
+<p>Greetings, fellow nerds, coders, and open-source enthusiasts! 👋</p>
+<p>Welcome to my humble corner of the internet, where we celebrate the beauty of <strong>Linux</strong>, embrace the power of <strong>Free and Open Source Software (FOSS)</strong>, and dive deep into the art of <strong>coding</strong>. Whether you&rsquo;re a seasoned command-line wizard or a brave soul just starting your Linux journey, this blog is for you.</p>
+<h2 id="what-to-expect">What to Expect?</h2>
+<ul>
+<li><strong>Linux Tips &amp; Tricks</strong>: From obscure terminal commands to desktop customization magic, we&rsquo;ve got you covered.</li>
+<li><strong>FOSS Adventures</strong>: Let&rsquo;s explore the wild world of open-source software and the unsung heroes behind it.</li>
+<li><strong>Mobile Linux</strong>: Because who doesn’t want a phone that respects your freedom? (Looking at you, PinePhone and postmarketOS).</li>
+<li><strong>Coding Shenanigans</strong>: Python, Rust, C#, Bash, and the occasional &ldquo;How the heck did I break my build again?&rdquo; moment. No language is safe.</li>
+</ul>
+<h2 id="why-linux">Why Linux?</h2>
+<p>Linux isn’t just an operating system—it&rsquo;s a way of life! It’s about freedom, community, and occasionally spending an entire weekend fixing Wi-Fi drivers. But hey, who needs sleep when you can have a perfectly configured system running on <em>your</em> terms?</p>
+<h2 id="join-the-fun">Join the Fun!</h2>
+<p>I’ll be sharing my experiences, frustrations (because let’s be honest, there will be plenty), and cool discoveries along the way. If you love tech, open-source, and a bit of lighthearted nerdiness, you’re in the right place.</p>
+<p>Pull up a terminal, grab a cup of your favorite beverage (mine’s coffee ☕), and let’s get started!</p>
+<p>Stay tuned, and remember: With great power comes great responsibility&hellip; and probably some dependency hell.</p>
+<p>— <em>Ivan</em></p>
+]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>My First Post</title>
+      <link>http://localhost:1313/posts/my-first-post/</link>
+      <pubDate>Thu, 03 Oct 2024 06:50:14 +0000</pubDate>
+      
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <description><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>This is <strong>bold</strong> text, and this is <em>emphasized</em> text.</p>
+<p>Visit the <a href="https://gohugo.io">Hugo</a> webiste!</p>
+]]></description>
+      
+    </item>
+    
     
     
     
