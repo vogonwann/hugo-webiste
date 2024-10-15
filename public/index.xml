@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
   <channel>
     <title>Linux/FOSS and beyond</title>
-    <link>http://localhost:1313/</link>
+    <link>https://janjic.lol/</link>
     <description>Recent content on Linux/FOSS and beyond</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 03 Oct 2024 18:13:42 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/img/icon.svg</icon>
+    <lastBuildDate>Thu, 03 Oct 2024 18:13:42 +0000</lastBuildDate><atom:link href="https://janjic.lol/index.xml" rel="self" type="application/rss+xml" /><icon>https://janjic.lol/img/icon.svg</icon>
     
     
     <item>
       <title>Introduction</title>
-      <link>http://localhost:1313/posts/intro-post/</link>
+      <link>https://janjic.lol/posts/intro-post/</link>
       <pubDate>Thu, 03 Oct 2024 18:13:42 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/intro-post/</guid>
+      <guid>https://janjic.lol/posts/intro-post/</guid>
       <description><![CDATA[<h1 id="welcome-to-the-geek-side-linux-foss-and-all-things-open-source">Welcome to the Geek Side: Linux, FOSS, and All Things Open Source</h1>
 <p>Greetings, fellow nerds, coders, and open-source enthusiasts! 👋</p>
 <p>Welcome to my humble corner of the internet, where we celebrate the beauty of <strong>Linux</strong>, embrace the power of <strong>Free and Open Source Software (FOSS)</strong>, and dive deep into the art of <strong>coding</strong>. Whether you&rsquo;re a seasoned command-line wizard or a brave soul just starting your Linux journey, this blog is for you.</p>
@@ -31,21 +31,6 @@
 <p>Pull up a terminal, grab a cup of your favorite beverage (mine’s coffee ☕), and let’s get started!</p>
 <p>Stay tuned, and remember: With great power comes great responsibility&hellip; and probably some dependency hell.</p>
 <p>— <em>Ivan</em></p>
-]]></description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>My First Post</title>
-      <link>http://localhost:1313/posts/my-first-post/</link>
-      <pubDate>Thu, 03 Oct 2024 06:50:14 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/my-first-post/</guid>
-      <description><![CDATA[<h2 id="introduction">Introduction</h2>
-<p>This is <strong>bold</strong> text, and this is <em>emphasized</em> text.</p>
-<p>Visit the <a href="https://gohugo.io">Hugo</a> webiste!</p>
 ]]></description>
       
     </item>
