@@ -1,19 +1,57 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
   <channel>
     <title>Linux/FOSS and beyond</title>
-    <link>http://localhost:1313/</link>
+    <link>https://janjic.lol/</link>
     <description>Recent content on Linux/FOSS and beyond</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Oct 2024 16:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/img/icon.svg</icon>
+    <lastBuildDate>Wed, 16 Oct 2024 04:00:00 +0000</lastBuildDate><atom:link href="https://janjic.lol/index.xml" rel="self" type="application/rss+xml" /><icon>https://janjic.lol/img/icon.svg</icon>
+    
+    
+    <item>
+      <title>Splitcat: My File Splitting and Merging App</title>
+      <link>https://janjic.lol/posts/splitcat-post/</link>
+      <pubDate>Wed, 16 Oct 2024 04:00:00 +0000</pubDate>
+      
+      <guid>https://janjic.lol/posts/splitcat-post/</guid>
+      <description><![CDATA[<h1 id="splitcat-an-app-for-easy-file-splitting-and-merging">Splitcat: An App for Easy File Splitting and Merging</h1>
+<p>I’m excited to introduce my latest project – <strong>Splitcat</strong>! 🎉 After a lot of work, the app is now <strong>fully developed in Flutter</strong> and ready for download on <a href="https://github.com/vogonwann/splitcat">GitHub</a> and <a href="https://flathub.org/apps/details/lol.janjic.Splitcat">Flathub</a>.</p>
+<hr>
+<h2 id="about-the-app">About the App</h2>
+<p>Splitcat is built entirely in <strong>Flutter</strong>, ensuring a smooth and responsive user experience on both desktop and mobile platforms. It simplifies <strong>file splitting and merging</strong>, making it easier to manage large files without needing complex command-line tools.</p>
+<p>Some typical use cases include:</p>
+<ul>
+<li><strong>Splitting large files</strong> into smaller chunks for sharing via email or uploading to platforms with size limits.</li>
+<li><strong>Merging chunks back</strong> into the original file seamlessly.</li>
+</ul>
+<p>With <strong>ARM64 support</strong>, Splitcat runs perfectly on <strong>Linux phones</strong> like those with <strong>postmarketOS</strong> or <strong>mobian</strong>.</p>
+<hr>
+<h2 id="key-features">Key Features</h2>
+<ul>
+<li><strong>Preset and Custom Split Options:</strong> Choose predefined chunk sizes for specific apps or create your own.</li>
+<li><strong>Simple and Intuitive UI:</strong> Designed with a minimal layout, including large buttons for easy navigation, especially on smaller screens.</li>
+<li><strong>Multi-Platform Support:</strong> Flutter enables compatibility across desktops and Linux phones alike.</li>
+<li><strong>Flatpak Package:</strong> Available on <a href="https://flathub.org/">Flathub</a> for hassle-free installation on various Linux distributions.</li>
+</ul>
+<hr>
+<h2 id="installation">Installation</h2>
+<p><strong>From Flathub:</strong><br>
+Install the app with the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>flatpak install flathub your.app.id
+</span></span></code></pre></div><p><strong>From GitHub:</strong>
+Alternatively, download the source code or binaries directly from <a href="https://github.com/vogonwann/splitcat/releases">GitHub</a>.</p>
+]]></description>
+      
+    </item>
+    
     
     
     <item>
       <title>Introduction</title>
-      <link>http://localhost:1313/posts/intro-post/</link>
+      <link>https://janjic.lol/posts/intro-post/</link>
       <pubDate>Thu, 03 Oct 2024 18:13:42 +0000</pubDate>
       
-      <guid>http://localhost:1313/posts/intro-post/</guid>
+      <guid>https://janjic.lol/posts/intro-post/</guid>
       <description><![CDATA[<h1 id="welcome-to-the-geek-side-linux-foss-and-all-things-open-source">Welcome to the Geek Side: Linux, FOSS, and All Things Open Source</h1>
 <p>Greetings, fellow nerds, coders, and open-source enthusiasts! 👋</p>
 <p>Welcome to my humble corner of the internet, where we celebrate the beauty of <strong>Linux</strong>, embrace the power of <strong>Free and Open Source Software (FOSS)</strong>, and dive deep into the art of <strong>coding</strong>. Whether you&rsquo;re a seasoned command-line wizard or a brave soul just starting your Linux journey, this blog is for you.</p>

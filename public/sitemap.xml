@@ -2,21 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-10-16T16:00:00+00:00</lastmod>
+    <loc>https://janjic.lol/</loc>
+    <lastmod>2024-10-16T04:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-10-16T16:00:00+00:00</lastmod>
+    <loc>https://janjic.lol/posts/</loc>
+    <lastmod>2024-10-16T04:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/intro-post/</loc>
+    <loc>https://janjic.lol/posts/splitcat-post/</loc>
+    <lastmod>2024-10-16T04:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://janjic.lol/posts/intro-post/</loc>
     <lastmod>2024-10-03T18:13:42+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://janjic.lol/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/manifest/index.json</loc>
+    <loc>https://janjic.lol/manifest/index.json</loc>
   </url><url>
-    <loc>http://localhost:1313/search/</loc>
+    <loc>https://janjic.lol/search/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://janjic.lol/tags/</loc>
   </url>
 </urlset>
