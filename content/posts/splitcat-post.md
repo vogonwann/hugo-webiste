@@ -1,6 +1,6 @@
 ---
-title: "Introduction"
-date: 2024-10-12T10:05:00Z
+title: "Splitcat: My File Splitting and Merging App"
+date: 2024-10-16T16:00:00Z
 draft: false
 ---
 

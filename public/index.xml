@@ -5,45 +5,7 @@
     <description>Recent content on Linux/FOSS and beyond</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 12 Oct 2024 10:05:00 +0000</lastBuildDate><atom:link href="https://janjic.lol/index.xml" rel="self" type="application/rss+xml" /><icon>https://janjic.lol/img/icon.svg</icon>
-    
-    
-    <item>
-      <title>Introduction</title>
-      <link>https://janjic.lol/posts/splitcat-post/</link>
-      <pubDate>Sat, 12 Oct 2024 10:05:00 +0000</pubDate>
-      
-      <guid>https://janjic.lol/posts/splitcat-post/</guid>
-      <description><![CDATA[<h1 id="splitcat-an-app-for-easy-file-splitting-and-merging">Splitcat: An App for Easy File Splitting and Merging</h1>
-<p>I’m excited to introduce my latest project – <strong>Splitcat</strong>! 🎉 After a lot of work, the app is now <strong>fully developed in Flutter</strong> and ready for download on <a href="https://github.com/vogonwann/splitcat">GitHub</a> and <a href="https://flathub.org/apps/details/lol.janjic.Splitcat">Flathub</a>.</p>
-<hr>
-<h2 id="about-the-app">About the App</h2>
-<p>Splitcat is built entirely in <strong>Flutter</strong>, ensuring a smooth and responsive user experience on both desktop and mobile platforms. It simplifies <strong>file splitting and merging</strong>, making it easier to manage large files without needing complex command-line tools.</p>
-<p>Some typical use cases include:</p>
-<ul>
-<li><strong>Splitting large files</strong> into smaller chunks for sharing via email or uploading to platforms with size limits.</li>
-<li><strong>Merging chunks back</strong> into the original file seamlessly.</li>
-</ul>
-<p>With <strong>ARM64 support</strong>, Splitcat runs perfectly on <strong>Linux phones</strong> like those with <strong>postmarketOS</strong> or <strong>mobian</strong>.</p>
-<hr>
-<h2 id="key-features">Key Features</h2>
-<ul>
-<li><strong>Preset and Custom Split Options:</strong> Choose predefined chunk sizes for specific apps or create your own.</li>
-<li><strong>Simple and Intuitive UI:</strong> Designed with a minimal layout, including large buttons for easy navigation, especially on smaller screens.</li>
-<li><strong>Multi-Platform Support:</strong> Flutter enables compatibility across desktops and Linux phones alike.</li>
-<li><strong>Flatpak Package:</strong> Available on <a href="https://flathub.org/">Flathub</a> for hassle-free installation on various Linux distributions.</li>
-</ul>
-<hr>
-<h2 id="installation">Installation</h2>
-<p><strong>From Flathub:</strong><br>
-Install the app with the following command:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>flatpak install flathub your.app.id
-</span></span></code></pre></div><p><strong>From GitHub:</strong>
-Alternatively, download the source code or binaries directly from <a href="https://github.com/vogonwann/splitcat/releases">GitHub</a>.</p>
-]]></description>
-      
-    </item>
-    
+    <lastBuildDate>Wed, 16 Oct 2024 16:00:00 +0000</lastBuildDate><atom:link href="https://janjic.lol/index.xml" rel="self" type="application/rss+xml" /><icon>https://janjic.lol/img/icon.svg</icon>
     
     
     <item>
