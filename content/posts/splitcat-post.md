@@ -36,8 +36,7 @@ With **ARM64 support**, Splitcat runs perfectly on **Linux phones** like those w
 **From Flathub:**  
 Install the app with the following command:  
 ```bash
-flatpak install flathub your.app.id
+flatpak install flathub lol.janjic.Splitcat
 ```
-
 **From GitHub:**
 Alternatively, download the source code or binaries directly from [GitHub](https://github.com/vogonwann/splitcat/releases).
