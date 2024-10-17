@@ -1,19 +1,71 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
   <channel>
     <title>Linux/FOSS and beyond</title>
-    <link>https://janjic.lol/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on Linux/FOSS and beyond</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Oct 2024 04:00:00 +0000</lastBuildDate><atom:link href="https://janjic.lol/index.xml" rel="self" type="application/rss+xml" /><icon>https://janjic.lol/img/icon.svg</icon>
+    <lastBuildDate>Thu, 17 Oct 2024 12:00:00 +0100</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/img/icon.svg</icon>
+    
+    
+    <item>
+      <title>Resolving &#39;Cannot access a disposed context instance&#39; Error in ASP.NET Core</title>
+      <link>http://localhost:1313/posts/hot-choco-error-post/</link>
+      <pubDate>Thu, 17 Oct 2024 12:00:00 +0100</pubDate>
+      
+      <guid>http://localhost:1313/posts/hot-choco-error-post/</guid>
+      <description><![CDATA[<h2 id="introduction">Introduction</h2>
+<p>When developing an ASP.NET Core application and using Entity Framework (especially when using HotChocolate GraphQL library) to manage your database, you may encounter the following error:</p>
+<pre tabindex="0"><code>Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application.
+</code></pre><h2 id="cause">Cause</h2>
+<p>This error typically occurs when a database context (<code>DbContext</code>) is attempted to be used after it has been disposed. This often happens in scenarios where the <code>DbContext</code> instance is not properly managed within your Dependency Injection (DI) system.</p>
+<h2 id="solution">Solution</h2>
+<h3 id="use-the-factory-pattern">Use the Factory Pattern</h3>
+<p>The solution to this error is to use factory pattern to create a new instance of the <code>DbContext</code> each time it is needed. This way, you can avoid issues with managing the lifecycle of instances.</p>
+<ol>
+<li>
+<p><strong>Register the Factory in the DI Container</strong>:</p>
+<p>In your <code>Program.cs</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> connectionString = builder.Configuration.GetConnectionString(<span style="color:#e6db74">&#34;DefaultConnection&#34;</span>);
+</span></span><span style="display:flex;"><span>builder.Services..AddDbContextFactory&lt;LibreBorrDbContext&gt;(options =&gt; {
+</span></span><span style="display:flex;"><span>        options.UseSqlServer(connectionString); <span style="color:#75715e">// or whatever DB server you are using</span>
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Use the Factory in Your Service</strong>:</p>
+<p>In your service (<code>BookService</code>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BookService</span> : IBookService
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> IDbContextFactory _dbContextFactory;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> BookService(IDbContextFactory dbContextFactory)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        _dbContextFactory = dbContextFactory;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">async</span> Task&lt;List&lt;Book&gt;&gt; GetBooks()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">await</span> <span style="color:#66d9ef">using</span> var context = _dbContextFactory.CreateDbContext();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">await</span> context.Books.ToListAsync();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>Using the factory pattern for managing <code>DbContext</code> instances allows you to avoid issues with disposal and lifecycle management of the context. This method provides greater control over the context and helps you eliminate errors like <code>Cannot access a disposed context instance</code>.</p>
+<p>If you have any further questions or need assistance, feel free to reach out! 😊</p>
+]]></description>
+      
+    </item>
+    
     
     
     <item>
       <title>Splitcat: My File Splitting and Merging App</title>
-      <link>https://janjic.lol/posts/splitcat-post/</link>
+      <link>http://localhost:1313/posts/splitcat-post/</link>
       <pubDate>Wed, 16 Oct 2024 04:00:00 +0000</pubDate>
       
-      <guid>https://janjic.lol/posts/splitcat-post/</guid>
+      <guid>http://localhost:1313/posts/splitcat-post/</guid>
       <description><![CDATA[<h1 id="splitcat-an-app-for-easy-file-splitting-and-merging">Splitcat: An App for Easy File Splitting and Merging</h1>
 <p>I’m excited to introduce my latest project – <strong>Splitcat</strong>! 🎉 After a lot of work, the app is now <strong>fully developed in Flutter</strong> and ready for download on <a href="https://github.com/vogonwann/splitcat">GitHub</a> and <a href="https://flathub.org/apps/details/lol.janjic.Splitcat">Flathub</a>.</p>
 <hr>
@@ -48,10 +100,10 @@ Alternatively, download the source code or binaries directly from <a href="https
     
     <item>
       <title>Introduction</title>
-      <link>https://janjic.lol/posts/intro-post/</link>
+      <link>http://localhost:1313/posts/intro-post/</link>
       <pubDate>Thu, 03 Oct 2024 18:13:42 +0000</pubDate>
       
-      <guid>https://janjic.lol/posts/intro-post/</guid>
+      <guid>http://localhost:1313/posts/intro-post/</guid>
       <description><![CDATA[<h1 id="welcome-to-the-geek-side-linux-foss-and-all-things-open-source">Welcome to the Geek Side: Linux, FOSS, and All Things Open Source</h1>
 <p>Greetings, fellow nerds, coders, and open-source enthusiasts! 👋</p>
 <p>Welcome to my humble corner of the internet, where we celebrate the beauty of <strong>Linux</strong>, embrace the power of <strong>Free and Open Source Software (FOSS)</strong>, and dive deep into the art of <strong>coding</strong>. Whether you&rsquo;re a seasoned command-line wizard or a brave soul just starting your Linux journey, this blog is for you.</p>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
   <channel>
-    <title>Posts on Linux/FOSS and beyond</title>
-    <link>http://localhost:1313/posts/</link>
-    <description>Recent content in Posts on Linux/FOSS and beyond</description>
+    <title>HotChocolate on Linux/FOSS and beyond</title>
+    <link>http://localhost:1313/tags/hotchocolate/</link>
+    <description>Recent content in HotChocolate on Linux/FOSS and beyond</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 17 Oct 2024 12:00:00 +0100</lastBuildDate><atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/img/icon.svg</icon>
+    <lastBuildDate>Thu, 17 Oct 2024 12:00:00 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/hotchocolate/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/img/icon.svg</icon>
     
     
     <item>
@@ -79,73 +79,6 @@
 <h2 id="conclusion">Conclusion</h2>
 <p>Using the factory pattern for managing <code>DbContext</code> instances allows you to avoid issues with disposal and lifecycle management of the context. This method provides greater control over the context and helps you eliminate errors like <code>Cannot access a disposed context instance</code>.</p>
 <p>If you have any further questions or need assistance, feel free to reach out! 😊</p>
-]]></description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>Splitcat: My File Splitting and Merging App</title>
-      <link>http://localhost:1313/posts/splitcat-post/</link>
-      <pubDate>Wed, 16 Oct 2024 04:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/splitcat-post/</guid>
-      <description><![CDATA[<h1 id="splitcat-an-app-for-easy-file-splitting-and-merging">Splitcat: An App for Easy File Splitting and Merging</h1>
-<p>I’m excited to introduce my latest project – <strong>Splitcat</strong>! 🎉 After a lot of work, the app is now <strong>fully developed in Flutter</strong> and ready for download on <a href="https://github.com/vogonwann/splitcat">GitHub</a> and <a href="https://flathub.org/apps/details/lol.janjic.Splitcat">Flathub</a>.</p>
-<hr>
-<h2 id="about-the-app">About the App</h2>
-<p>Splitcat is built entirely in <strong>Flutter</strong>, ensuring a smooth and responsive user experience on both desktop and mobile platforms. It simplifies <strong>file splitting and merging</strong>, making it easier to manage large files without needing complex command-line tools.</p>
-<p>Some typical use cases include:</p>
-<ul>
-<li><strong>Splitting large files</strong> into smaller chunks for sharing via email or uploading to platforms with size limits.</li>
-<li><strong>Merging chunks back</strong> into the original file seamlessly.</li>
-</ul>
-<p>With <strong>ARM64 support</strong>, Splitcat runs perfectly on <strong>Linux phones</strong> like those with <strong>postmarketOS</strong> or <strong>mobian</strong>.</p>
-<hr>
-<h2 id="key-features">Key Features</h2>
-<ul>
-<li><strong>Preset and Custom Split Options:</strong> Choose predefined chunk sizes for specific apps or create your own.</li>
-<li><strong>Simple and Intuitive UI:</strong> Designed with a minimal layout, including large buttons for easy navigation, especially on smaller screens.</li>
-<li><strong>Multi-Platform Support:</strong> Flutter enables compatibility across desktops and Linux phones alike.</li>
-<li><strong>Flatpak Package:</strong> Available on <a href="https://flathub.org/">Flathub</a> for hassle-free installation on various Linux distributions.</li>
-</ul>
-<hr>
-<h2 id="installation">Installation</h2>
-<p><strong>From Flathub:</strong><br>
-Install the app with the following command:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>flatpak install flathub lol.janjic.Splitcat
-</span></span></code></pre></div><p><strong>From GitHub:</strong>
-Alternatively, download the source code or binaries directly from <a href="https://github.com/vogonwann/splitcat/releases">GitHub</a>.</p>
-]]></description>
-      
-    </item>
-    
-    
-    
-    <item>
-      <title>Introduction</title>
-      <link>http://localhost:1313/posts/intro-post/</link>
-      <pubDate>Thu, 03 Oct 2024 18:13:42 +0000</pubDate>
-      
-      <guid>http://localhost:1313/posts/intro-post/</guid>
-      <description><![CDATA[<h1 id="welcome-to-the-geek-side-linux-foss-and-all-things-open-source">Welcome to the Geek Side: Linux, FOSS, and All Things Open Source</h1>
-<p>Greetings, fellow nerds, coders, and open-source enthusiasts! 👋</p>
-<p>Welcome to my humble corner of the internet, where we celebrate the beauty of <strong>Linux</strong>, embrace the power of <strong>Free and Open Source Software (FOSS)</strong>, and dive deep into the art of <strong>coding</strong>. Whether you&rsquo;re a seasoned command-line wizard or a brave soul just starting your Linux journey, this blog is for you.</p>
-<h2 id="what-to-expect">What to Expect?</h2>
-<ul>
-<li><strong>Linux Tips &amp; Tricks</strong>: From obscure terminal commands to desktop customization magic, we&rsquo;ve got you covered.</li>
-<li><strong>FOSS Adventures</strong>: Let&rsquo;s explore the wild world of open-source software and the unsung heroes behind it.</li>
-<li><strong>Mobile Linux</strong>: Because who doesn’t want a phone that respects your freedom? (Looking at you, PinePhone and postmarketOS).</li>
-<li><strong>Coding Shenanigans</strong>: Python, Rust, C#, Bash, and the occasional &ldquo;How the heck did I break my build again?&rdquo; moment. No language is safe.</li>
-</ul>
-<h2 id="why-linux">Why Linux?</h2>
-<p>Linux isn’t just an operating system—it&rsquo;s a way of life! It’s about freedom, community, and occasionally spending an entire weekend fixing Wi-Fi drivers. But hey, who needs sleep when you can have a perfectly configured system running on <em>your</em> terms?</p>
-<h2 id="join-the-fun">Join the Fun!</h2>
-<p>I’ll be sharing my experiences, frustrations (because let’s be honest, there will be plenty), and cool discoveries along the way. If you love tech, open-source, and a bit of lighthearted nerdiness, you’re in the right place.</p>
-<p>Pull up a terminal, grab a cup of your favorite beverage (mine’s coffee ☕), and let’s get started!</p>
-<p>Stay tuned, and remember: With great power comes great responsibility&hellip; and probably some dependency hell.</p>
-<p>— <em>Ivan</em></p>
 ]]></description>
       
     </item>

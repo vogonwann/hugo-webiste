@@ -1,10 +1,59 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
   <channel>
     <title>Tags on Linux/FOSS and beyond</title>
-    <link>https://janjic.lol/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Linux/FOSS and beyond</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://janjic.lol/tags/index.xml" rel="self" type="application/rss+xml" /><icon>https://janjic.lol/img/icon.svg</icon>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 17 Oct 2024 12:00:00 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/img/icon.svg</icon>
+    
+    
+    <item>
+      <title>ASP.NET Core</title>
+      <link>http://localhost:1313/tags/asp.net-core/</link>
+      <pubDate>Thu, 17 Oct 2024 12:00:00 +0100</pubDate>
+      
+      <guid>http://localhost:1313/tags/asp.net-core/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>Entity Framework</title>
+      <link>http://localhost:1313/tags/entity-framework/</link>
+      <pubDate>Thu, 17 Oct 2024 12:00:00 +0100</pubDate>
+      
+      <guid>http://localhost:1313/tags/entity-framework/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>GraphQL</title>
+      <link>http://localhost:1313/tags/graphql/</link>
+      <pubDate>Thu, 17 Oct 2024 12:00:00 +0100</pubDate>
+      
+      <guid>http://localhost:1313/tags/graphql/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
+    
+    
+    <item>
+      <title>HotChocolate</title>
+      <link>http://localhost:1313/tags/hotchocolate/</link>
+      <pubDate>Thu, 17 Oct 2024 12:00:00 +0100</pubDate>
+      
+      <guid>http://localhost:1313/tags/hotchocolate/</guid>
+      <description><![CDATA[]]></description>
+      
+    </item>
+    
     
   </channel>
 </rss>

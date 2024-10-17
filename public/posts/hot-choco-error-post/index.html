@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html class="" lang="en-us"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+    <meta name="robots" content="noai, noimageai">
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+
+    <link
+    rel="icon"
+    href='/favicon.png'
+/>
+<link
+    rel="shortcut icon"
+    href='/favicon.ico'
+    type="image/x-icon"
+/>
+<link
+    rel="apple-touch-icon"
+    href='/apple-touch-icon.png'
+/>
+
+<title>
+        
+            Resolving &#39;Cannot access a disposed context instance&#39; Error in ASP.NET Core  &ndash;
+        
+        Linux/FOSS and beyond
+    </title>
+
+    
+    <link href="/symbols-nerd-font/symbols-nerd-font.css" rel="stylesheet" />
+    <link href="/jetbrains-mono/jetbrains-mono.css" rel="stylesheet" />
+
+    
+    
+    <link type="text/css" rel="stylesheet" href=http://localhost:1313/css/styles.abbd6311bb4b6ca58f8e7398140529245ae0f6428b759fcd830742eee2619eabb900ba9914a9affb82aa9a16a9b9ea727bb315315a976a0db0e7513a5f12c504.css integrity="sha512-q71jEbtLbKWPjnOYFAUpJFrg9kKLdZ/NgwdC7uJhnqu5ALqZFKmv&#43;4Kqmhapuepye7MVMVqXag2w51E6XxLFBA==" />
+<meta name="author" content="" />
+
+    
+        <meta name="keywords" content='ASP.NET Core, Entity Framework, GraphQL, HotChocolate' />
+    
+    
+        <meta name="description" content="&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;When developing an ASP.NET Core application and using Entity Framework (especially when using HotChocolate GraphQL library) to manage your database, you may encounter the following error:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application.
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;cause&#34;&gt;Cause&lt;/h2&gt;
+&lt;p&gt;This error typically occurs when a database context (&lt;code&gt;DbContext&lt;/code&gt;) is attempted to be used after it has been disposed. This often happens in scenarios where the &lt;code&gt;DbContext&lt;/code&gt; instance is not properly managed within your Dependency Injection (DI) system.&lt;/p&gt;" />
+    
+
+<meta property="og:site_name"
+    content='Linux/FOSS and beyond' />
+
+    <meta property="og:title" content="Resolving &#39;Cannot access a disposed context instance&#39; Error in ASP.NET Core" />
+    <meta property="og:type" content="article" />
+    
+    <meta
+        property="article:author" content="" />
+    <meta
+        property="article:published_time"
+        content='2024-10-17T12:00:00Z&#43;0100' />
+    
+        
+            <meta property="article:tag" content="ASP.NET Core" />
+        
+            <meta property="article:tag" content="Entity Framework" />
+        
+            <meta property="article:tag" content="GraphQL" />
+        
+            <meta property="article:tag" content="HotChocolate" />
+        
+    
+    <meta property="og:url" content="http://localhost:1313/posts/hot-choco-error-post/" />
+    
+    
+    <meta property="og:image"
+        content="http://localhost:1313/img/icon.svg" />
+    
+        <meta property="og:description" content="&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;When developing an ASP.NET Core application and using Entity Framework (especially when using HotChocolate GraphQL li" />
+    
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:domain"
+      content='localhost:1313'
+/>
+<meta property="twitter:url" content="http://localhost:1313/posts/hot-choco-error-post/" />
+
+
+    <meta name="twitter:title" content="Resolving &#39;Cannot access a disposed context instance&#39; Error in ASP.NET Core" />
+    
+    
+    
+    <meta name="twitter:image"
+        content="http://localhost:1313/img/icon.svg" />
+    
+        <meta name="twitter:description" content="&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;When developing an ASP.NET Core application and using Entity Framework (especially when using HotChocolate GraphQL li" />
+    
+
+<link rel="manifest" href="/manifest/index.json" />
+</head>
+
+
+<body>
+        <div id="baseContainer"><header class="">
+<div class="titleAndSearchContainer">
+        <div id="titleContainer">
+            
+                <a class="unstyledLink" href="/">
+                    <img src='/logo.svg' alt='Logo'/>
+                </a>
+            
+            <div class="rightOfLogo">
+                <div class="titleAndHamburger">
+                    <h1>
+                        <a class="unstyledLink" href="/">Linux/FOSS and beyond</a>
+                        
+                    </h1>
+                    
+                </div>
+                <div id="wide_nav"><nav>
+    
+    <ul id="main-nav">
+        <li><a href="/">Home</a></li>
+        
+            <li><a href="/posts/">Posts</a></li>
+        
+        
+        
+        
+        
+        
+        
+            <li><a href="/tags/">Tags</a></li>
+        
+        
+    </ul>
+</nav>
+</div>
+            </div>
+        </div>
+        <div class="search">
+    <input id="searchbar" type="text" placeholder='Search' />
+    <span class="nerdlink" onclick="newSearch();">&#xf002;</span>
+</div>
+<script>
+    function newSearch() {
+        let term = searchbar.value.trim();
+        if (!term) return;
+        location.href = `/search/?q=${term}`;
+    }
+    searchbar.onkeyup = (ev) => {if (ev.keyCode == 13) newSearch()};
+</script>
+
+    </div>
+    <div id="links">
+        <a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="/index.xml">
+    
+    
+        &#xf09e;
+    
+    <span>
+        RSS
+    </span>
+</a>
+
+        
+        <a
+    
+        rel="me"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://mastodon.social/@wannoye">
+    
+    
+        <svg class='pseudofont' xmlns:svg='http://www.w3.org/2000/svg' width='16' height='16' viewbox='0 0 16 16'><path d='M 7.4779094,-1.598624e-6 C 5.5602384,0.0156984 3.7155894,0.2233384 2.6405814,0.7170384 c 0,0 -2.13206093,0.9537 -2.13206093,4.20766 0,0.74512 -0.01448,1.63603 0.0091,2.58084 0.07742,3.1821946 0.58336693,6.3183886 3.52553593,7.0971276 1.356568,0.359063 2.521335,0.434289 3.45936,0.382729 1.701085,-0.09431 2.6560206,-0.607063 2.6560206,-0.607063 l -0.05611,-1.234252 c 0,0 -1.2156316,0.383272 -2.5808476,0.33656 -1.352609,-0.04639 -2.780561,-0.145832 -2.999328,-1.80651 -0.0202,-0.145872 -0.03031,-0.301902 -0.03031,-0.465714 0,-10e-7 1.327834,0.324572 3.010574,0.40167 1.028943,0.0472 1.993827,-0.06028 2.9738766,-0.177218 1.879445,-0.224425 3.515901,-1.382448 3.721577,-2.4405646 0.32407,-1.666815 0.297376,-4.067605 0.297376,-4.067605 0,-3.25396 -2.131943,-4.20766 -2.131943,-4.20766 C 11.288476,0.2233384 9.4426784,0.0156784 7.5250084,-1.598624e-6 Z M 5.3076104,2.5424984 c 0.798781,0 1.403595,0.30701 1.803551,0.92113 l 0.388886,0.65181 0.388884,-0.65181 c 0.399875,-0.61412 1.00469,-0.92113 1.803551,-0.92113 0.6903266,0 1.2465526,0.24267 1.6713186,0.71609 0.411755,0.47342 0.61677,1.11337 0.61677,1.91862 v 3.939988 h -1.560986 v -3.824218 c 0,-0.80613 -0.339166,-1.21531 -1.0176126,-1.21531 -0.750129,0 -1.126049,0.48533 -1.126049,1.44509 v 2.09324 h -1.551753 v -2.09324 c 0,-0.95976 -0.376039,-1.44509 -1.126168,-1.44509 -0.678446,0 -1.017613,0.40918 -1.017613,1.21531 v 3.824218 h -1.560985 v -3.939988 c 0,-0.80525 0.205053,-1.4452 0.616889,-1.91862 0.424685,-0.47342 0.980911,-0.71609 1.671317,-0.71609 z' /></svg>
+    
+    <span>
+        Mastodon
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://github.com/vogonwann">
+    
+    
+        &#xf09b;
+    
+    <span>
+        GitHub
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://gitlab.gnome.org/wannoyeah">
+    
+    
+        &#xf296;
+    
+    <span>
+        GNOME GitLab
+    </span>
+</a>
+<a
+    
+        rel="noreferrer"
+    
+    target="_blank"
+    class="nerdlink"
+    href="https://pixelfed.social/i/web/profile/566050411221857022">
+    
+    
+        &#xf16d;
+    
+    <span>
+        Pixelfed
+    </span>
+</a>
+
+    </div>
+    
+
+</header>
+<div id="contentContainer">
+                <div id="content">
+                    <main>
+<article class="card single">
+    
+        <h1>Resolving &#39;Cannot access a disposed context instance&#39; Error in ASP.NET Core</h1>
+    
+    
+        <p class="date">
+            <span title='Date'>󰃭 </span>
+    2024-10-17
+
+</p>
+    
+    
+    
+    
+    <div><h2 id="introduction">Introduction</h2>
+<p>When developing an ASP.NET Core application and using Entity Framework (especially when using HotChocolate GraphQL library) to manage your database, you may encounter the following error:</p>
+<pre tabindex="0"><code>Cannot access a disposed context instance. A common cause of this error is disposing a context instance that was resolved from dependency injection and then later trying to use the same context instance elsewhere in your application.
+</code></pre><h2 id="cause">Cause</h2>
+<p>This error typically occurs when a database context (<code>DbContext</code>) is attempted to be used after it has been disposed. This often happens in scenarios where the <code>DbContext</code> instance is not properly managed within your Dependency Injection (DI) system.</p>
+<h2 id="solution">Solution</h2>
+<h3 id="use-the-factory-pattern">Use the Factory Pattern</h3>
+<p>The solution to this error is to use factory pattern to create a new instance of the <code>DbContext</code> each time it is needed. This way, you can avoid issues with managing the lifecycle of instances.</p>
+<ol>
+<li>
+<p><strong>Register the Factory in the DI Container</strong>:</p>
+<p>In your <code>Program.cs</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> connectionString = builder.Configuration.GetConnectionString(<span style="color:#e6db74">&#34;DefaultConnection&#34;</span>);
+</span></span><span style="display:flex;"><span>builder.Services..AddDbContextFactory&lt;LibreBorrDbContext&gt;(options =&gt; {
+</span></span><span style="display:flex;"><span>        options.UseSqlServer(connectionString); <span style="color:#75715e">// or whatever DB server you are using</span>
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div></li>
+<li>
+<p><strong>Use the Factory in Your Service</strong>:</p>
+<p>In your service (<code>BookService</code>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BookService</span> : IBookService
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> IDbContextFactory _dbContextFactory;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> BookService(IDbContextFactory dbContextFactory)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        _dbContextFactory = dbContextFactory;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">async</span> Task&lt;List&lt;Book&gt;&gt; GetBooks()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">await</span> <span style="color:#66d9ef">using</span> var context = _dbContextFactory.CreateDbContext();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">await</span> context.Books.ToListAsync();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>Using the factory pattern for managing <code>DbContext</code> instances allows you to avoid issues with disposal and lifecycle management of the context. This method provides greater control over the context and helps you eliminate errors like <code>Cannot access a disposed context instance</code>.</p>
+<p>If you have any further questions or need assistance, feel free to reach out! 😊</p>
+</div>
+</article>
+
+    <hr />
+    <p class="articleTagsContainer">
+        <span> </span>
+        <strong>Tags:</strong>
+        
+            <a
+                
+                href="/tags/asp.net-core/">#ASP.NET Core</a>
+        
+            <a
+                
+                href="/tags/entity-framework/">#Entity Framework</a>
+        
+            <a
+                
+                href="/tags/graphql/">#GraphQL</a>
+        
+            <a
+                
+                href="/tags/hotchocolate/">#HotChocolate</a>
+        
+    </p>
+
+
+
+
+
+
+                    </main><footer>
+    <hr />
+
+<p><small>
+        2024 &copy; 
+    </small></p>
+    <p><small>
+        <a href='https://gitlab.com/gabmus/hugo-ficurinia'>Ficurinia theme</a> for <a href='https://gohugo.io'>Hugo</a> by <a href='https://gabmus.org'>Gabriele Musco</a>. Licensed under <a href='https://www.gnu.org/licenses/agpl-3.0.html'>GNU AGPLv3</a>.
+    </small></p>
+</footer>
+</div>
+            </div>
+        </div>
+
+
+</body>
+</html>
