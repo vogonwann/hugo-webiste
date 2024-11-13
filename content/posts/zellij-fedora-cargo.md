@@ -1,5 +1,5 @@
 ---
-title: "Zellij Fedora Cargo"
+title: "Install Zellij Fedora With Cargo"
 date: 2024-11-13T08:36:38+01:00
 draft: false
 tags: ["zellij", "fedora", "cargo"]
