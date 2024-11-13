@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><?xml-stylesheet href="/feed_style.xsl" type="text/xsl"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="https://www.rssboard.org/media-rss">
+  <channel>
+    <title>Cargo on Linux/FOSS and beyond</title>
+    <link>http://localhost:1313/tags/cargo/</link>
+    <description>Recent content in Cargo on Linux/FOSS and beyond</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 Nov 2024 08:36:38 +0100</lastBuildDate><atom:link href="http://localhost:1313/tags/cargo/index.xml" rel="self" type="application/rss+xml" /><icon>http://localhost:1313/img/icon.svg</icon>
+    
+    
+    <item>
+      <title>Zellij Fedora Cargo</title>
+      <link>http://localhost:1313/posts/zellij-fedora-cargo/</link>
+      <pubDate>Wed, 13 Nov 2024 08:36:38 +0100</pubDate>
+      
+      <guid>http://localhost:1313/posts/zellij-fedora-cargo/</guid>
+      <description><![CDATA[<h1 id="how-to-install-zellij-on-fedora-linux-using-cargo">How to install zellij on Fedora Linux using cargo</h1>
+<p>As it is said on zellij <a href="https://zellij.dev/">webiste</a>:</p>
+<blockquote>
+<p>Zellij is a terminal workspace. It has the base functionality of a terminal multiplexer (similar to tmux or screen) but includes many built-in features that would allow users to extend it and create their own personalized environment.</p>
+</blockquote>
+<p>So, if you&rsquo;re looking for a modern screen or tmux replacement look no further.</p>
+<h1 id="installation">Installation</h1>
+<p>To get the latest version, it is best to install directly from cargo and in order to do so on Fedora Linux, we need to install some dependencies.</p>
+<ol>
+<li>First, install cargo using <a href="https://rustup.rs">rustup</a>:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl --proto <span style="color:#e6db74">&#39;=https&#39;</span> --tlsv1.2 -sSf https://sh.rustup.rs | sh
+</span></span></code></pre></div><ol start="2">
+<li>Then, install development dependencies using dnf:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo dnf group install c-development development-tools
+</span></span></code></pre></div><ol start="3">
+<li>In order to build <em>zellij</em> from cargo, we also need two perl libraries:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo dnf install perl-FindBin perl-IPC-Cmd
+</span></span></code></pre></div><ol start="4">
+<li>Finnaly:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cargo install --locked zellij
+</span></span></code></pre></div><p>Now grab a cup of cofee ☕️ and wait while it builds.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>I hope that you find this short post usefull. Happy hacking! 👩‍💻</p>
+]]></description>
+      
+    </item>
+    
+    
+  </channel>
+</rss>

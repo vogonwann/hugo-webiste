@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/cargo/</loc>
+    <lastmod>2024-11-13T08:36:38+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/fedora/</loc>
+    <lastmod>2024-11-13T08:36:38+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2024-11-13T08:36:38+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2024-11-13T08:36:38+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-11-13T08:36:38+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/zellij/</loc>
+    <lastmod>2024-11-13T08:36:38+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/zellij-fedora-cargo/</loc>
+    <lastmod>2024-11-13T08:36:38+01:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/asp.net-core/</loc>
     <lastmod>2024-10-17T12:00:00+01:00</lastmod>
   </url><url>
@@ -14,16 +35,7 @@
     <loc>http://localhost:1313/tags/hotchocolate/</loc>
     <lastmod>2024-10-17T12:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2024-10-17T12:00:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-10-17T12:00:00+01:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/posts/hot-choco-error-post/</loc>
-    <lastmod>2024-10-17T12:00:00+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-10-17T12:00:00+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/splitcat-post/</loc>
